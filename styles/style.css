@@ -1,0 +1,69 @@
+#body{
+  background-color: black;
+}
+#gallery, #about, #copyright {
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
+
+/* Galeria de imagenes en carrusel */
+
+section{
+  margin: 0 auto;
+  display: flex;
+  width: 600px;
+  height: 430px;
+}
+section img{
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .5;
+  transition: .5s ease;
+}
+section img:hover{
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+
+/* Barra de navegación */
+
+.navbar-container {
+  position: relative;
+}
+
+.navbar {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #f1f1f1;
+  width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.navbar li {
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar li a {
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar li a:hover {
+  background-color: #ddd;
+}
+
+.navbar-container:hover .navbar,
+.navbar:hover {
+  opacity: 1;
+  visibility: visible;
+}
