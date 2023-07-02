@@ -232,5 +232,44 @@ position: relative;
   filter: contrast(120%);
 }
 
+/*  Footer */
 
+
+.footer{
+  text-align: center;
+}
+.footer__p{
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Siento que esto podría generalizarlo mas arriba para no ocupar estas lineas tan especificas. "por revisar" */
+
+.footer__a{
+  text-decoration: none;
+}
+
+.footer__a:visited{
+  text-decoration: none;
+  color:white
+}
+
+
+}
+
+
+/* About this proyect Section */
+
+.sectiontext{
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.sectiontext__h2{
+  text-align: center;
+  margin: 5rem;
+}
+
+.sectiontext__p{
+  text-align: justify;
+  margin-bottom: 8rem;
 }
