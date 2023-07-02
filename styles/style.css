@@ -1,10 +1,149 @@
-#body{
+.body{
   background-color: black;
 }
 #gallery, #about, #copyright {
   color: white;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
+}
+
+
+/* Mobile View */
+
+@media (min-width: 375px){
+
+
+  /* Container */
+
+.container{
+  max-width: 375px;
+  margin: auto;
+  padding: auto;
+}
+
+
+
+/* Header */
+
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.header__h1{
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 18rem;
+  text-align: center;
+}
+
+
+/* Barra de navegación */
+
+.header__navbar--button{
+width: 100%;
+height: 100%;
+}
+
+
+.header__navbar {
+width: 2rem;
+height: 2rem;
+justify-content: center;
+position: relative;
+}
+
+.navbar__ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #e7e7e7;
+  width: 10rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  z-index: 999;
+}
+
+.navbar__ul--li{
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar__ul--li a {
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar__ul--li a:hover {
+  background-color: #ddd;
+}
+
+.header__navbar:target .navbar__ul,
+#navbarButton:focus + .navbar__ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Galeria de imagenes en carrusel */
+
+.section{
+  margin: 2rem auto 3rem auto;
+  display: flex;
+  width: 70%;
+  height: 20rem;
+}
+.section__img{
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .5;
+  transition: .5s ease;
+}
+.section__img:hover{
+  cursor: crosshair;
+  width: 50%;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+/*  Footer */
+
+
+.footer{
+  text-align: center;
+}
+.footer__p{
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+}
+
+/* Siento que esto podría generalizarlo mas arriba para no ocupar estas lineas tan especificas. "por revisar" */
+
+.footer__a{
+  text-decoration: none;
+}
+
+.footer__a:visited{
+  text-decoration: none;
+  color:white
+}
+
+/* Desktop View */
+
+
+@media (min-width: 1200px){
+/* Container */
+.container{
+  max-width: 1300px;
+  margin: auto;
+  padding: auto;
 }
 
 /* Galeria de imagenes en carrusel */
@@ -30,17 +169,34 @@ section img:hover{
 }
 
 
+/* Header */
+
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60rem;
+}
+
+.header__h1{
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
 /* Barra de navegación */
 
-.navbar-container {
-  position: relative;
+.header__navbar {
+width: 2rem;
+height: 2rem;
+align-self: start;
 }
 
 .navbar {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  background-color: #f1f1f1;
+  background-color: #e7e7e7;
   width: 200px;
   opacity: 0;
   visibility: hidden;
@@ -62,8 +218,9 @@ section img:hover{
   background-color: #ddd;
 }
 
-.navbar-container:hover .navbar,
+.header__navbar:hover .navbar,
 .navbar:hover {
   opacity: 1;
   visibility: visible;
+}
 }

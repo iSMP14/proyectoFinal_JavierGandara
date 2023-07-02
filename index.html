@@ -7,44 +7,41 @@
     <title>Gallery</title>
     <link rel="stylesheet" href="styles\style.css">
 </head>
-<body id="body">
-    <header>
-        <h1 id="gallery">G A L L E R Y</h1>
-        <div class="navbar-container">
-            <button id="toggleBtn">---</button>
-            <ul class="navbar">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="html/about.html">About</a></li>
-              <li><a href="html/contact.html">Contact</a></li>
-              <li><a href="html/firstmodel.html">Model #1</a></li>
-              <li><a href="html/secondmodel.html">Model #2</a></li>
+<body class="body">
+    <div class="container">
+    <header class="header">
+        <div class="header__navbar navbar">
+            <button class="header__navbar--button" id="navbarButton">- - -</button>
+            <ul class="navbar__ul">
+              <li class="navbar__ul--li"><a href="index.html">Home</a></li>
+              <li class="navbar__ul--li"><a href="html/about.html">About</a></li>
+              <li class="navbar__ul--li"><a href="html/contact.html">Contact</a></li>
+              <li class="navbar__ul--li"><a href="html/firstmodel.html">Model #1</a></li>
+              <li class="navbar__ul--li"><a href="html/secondmodel.html">Model #2</a></li>
             </ul>
           </div>
-        <hr>
+        <h1 class="header__h1">G A L L E R Y</h1>
     </header>
+    <hr>
     <main>
-    <div>
-    <section>
-        <img src="images/1.png" alt="1">
-        <img src="images/2.png" alt="2">
-        <img src="images/3.png" alt="3">
-        <img src="images/4.png" alt="4">
+    <section class="section">
+        <img class="section__img" src="images/1.png" alt="1">
+        <img class="section__img" src="images/2.png" alt="2">
+        <img class="section__img" src="images/3.png" alt="3">
+        <img class="section__img" src="images/4.png" alt="4">
     </section>
-    </div>
-    <br>
-    <div>
-        <section>
-            <img src="images/1.png" alt="1">
-            <img src="images/2.png" alt="2">
-            <img src="images/3.png" alt="3">
-            <img src="images/4.png" alt="4">
+        <section class="section">
+            <img class="section__img" src="images/1.png" alt="1">
+            <img class="section__img" src="images/2.png" alt="2">
+            <img class="section__img" src="images/3.png" alt="3">
+            <img class="section__img" src="images/4.png" alt="4">
         </section>
-        </div>
     </main>
-    <footer>
-        <hr>
-        <a target="_blank" href="html/contact.html">Contact</a>
-        <p id="copyright"> &copy; 2023 iSMP - copyright all rights reserved. </p>
+    <hr>
+    <footer class="footer">
+        <a target="_blank" href="html/contact.html" class="footer__a">Contact</a>
+        <p class="footer__p"> &copy; 2023 iSMP - copyright all rights reserved. </p>
     </footer>
+    </div>
 </body>
 </html>
