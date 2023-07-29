@@ -1,15 +1,13 @@
-.body {
-  background-color: black;
-}
+// Variables
+$primary-color: #e7e7e7;
+$text-color: white;
+$font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-
-
-/* Mobile View */
-
+// Mobile View
 @media (min-width: 375px) {
-
-
-  /* Container */
+  .body {
+    background-color: black;
+  }
 
   .container {
     max-width: 380px;
@@ -17,193 +15,169 @@
     padding: auto;
   }
 
-
-
-  /* Header */
-
   .header {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+
+    &__h1 {
+      color: $text-color;
+      font-family: $font-family;
+      width: 18rem;
+      text-align: center;
+    }
+
+    .navbar {
+      width: 2rem;
+      height: 2rem;
+      justify-content: center;
+      position: relative;
+
+      &__button {
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover .navbar__ul {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &__ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        background-color: $primary-color;
+        width: 10rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+        position: absolute;
+        z-index: 999;
+
+        &--li {
+          border-bottom: 1px solid #ddd;
+
+          a {
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+            color: #333;
+
+            &:hover {
+              background-color: #ddd;
+            }
+          }
+        }
+      }
+    }
   }
-
-  .header__h1 {
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 18rem;
-    text-align: center;
-  }
-
-
-  /* Barra de navegación */
-
-  .header__navbar--button {
-    width: 100%;
-    height: 100%;
-  }
-
-
-  .header__navbar {
-    width: 2rem;
-    height: 2rem;
-    justify-content: center;
-    position: relative;
-  }
-
-  .navbar__ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    background-color: #e7e7e7;
-    width: 10rem;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease;
-    position: absolute;
-    z-index: 999;
-  }
-
-  .navbar__ul--li {
-    border-bottom: 1px solid #ddd;
-  }
-
-  .navbar__ul--li a {
-    display: block;
-    padding: 12px;
-    text-decoration: none;
-    color: #333;
-  }
-
-  .navbar__ul--li a:hover {
-    background-color: #ddd;
-  }
-
-  .header__navbar:hover .navbar__ul {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  /* Galeria de imagenes en carrusel */
 
   .section {
     margin: 2rem auto 3rem auto;
     display: flex;
     width: 70%;
     height: 20rem;
+
+    &__img {
+      width: 0px;
+      flex-grow: 1;
+      object-fit: cover;
+      opacity: .5;
+      transition: .5s ease;
+
+      &:hover {
+        cursor: crosshair;
+        width: 50%;
+        opacity: 1;
+        filter: contrast(120%);
+      }
+    }
   }
-
-  .section__img {
-    width: 0px;
-    flex-grow: 1;
-    object-fit: cover;
-    opacity: .5;
-    transition: .5s ease;
-  }
-
-  .section__img:hover {
-    cursor: crosshair;
-    width: 50%;
-    opacity: 1;
-    filter: contrast(120%);
-  }
-
-  /*  Footer */
-
 
   .footer {
     text-align: center;
+
+    &__p {
+      color: $text-color;
+      font-family: $font-family;
+    }
+
+    &__a {
+      text-decoration: none;
+
+      &:visited {
+        text-decoration: none;
+        color: $text-color;
+      }
+    }
   }
-
-  .footer__p {
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-
-  /* Siento que esto podría generalizarlo mas arriba para no ocupar estas lineas tan especificas. "por revisar" */
-
-  .footer__a {
-    text-decoration: none;
-  }
-
-  .footer__a:visited {
-    text-decoration: none;
-    color: white
-  }
-
-  /* About this proyect Section */
 
   .sectiontext {
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: $text-color;
+    font-family: $font-family;
+
+    &__h2,
+    &__p {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__h2 {
+      text-align: center;
+      margin: 5rem;
+    }
+
+    &__p {
+      text-align: left;
+      margin-bottom: 8rem;
+      padding: 0.5rem;
+    }
+
+    &__contact {
+      text-align: center;
+      margin: 1rem;
+      padding: 1rem;
+
+      &__ul {
+        list-style: none;
+        margin: 0.2rem;
+        padding: 1rem;
+
+        &--li {
+          text-align: left;
+          margin: 1rem;
+        }
+      }
+    }
+
+    &__ul {
+      list-style: none;
+      margin-bottom: 8rem;
+
+      &--li {
+        text-align: left;
+      }
+    }
+
+
   }
-
-  .sectiontext__h2,
-  .sectiontext__p {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .sectiontext__h2 {
-    text-align: center;
-    margin: 5rem;
-    align-items: center;
-  }
-
-  .sectiontext__p {
-    text-align: left;
-    margin-bottom: 8rem;
-    padding: 0.5rem;
-
-  }
-
-  //* Contact section*/
-
-  .sectiontext__contact {
-    text-align: center;
-    margin: 1rem;
-    padding: 1rem;
-  }
-
-  .sectiontext__ul {
-    list-style: none;
-    margin: 0.2rem;
-    padding: 1rem;
-
-  }
-
-  .sectiontext__ul--li {
-    text-align: left;
-    margin: 1rem;
-  }
-
-  /* About model section*/
-
   .imggallery {
     display: flex;
     justify-content: center;
     margin: 5rem;
+  
+    &__img {
+      border: 5px solid white;
+      max-width: 100%;
+    }
   }
-
-  .imggallery__img {
-    border: 5px solid white;
-    max-width: 100%;
-  }
-
-
-
 }
 
-
-
-/* Tablet View */
-
-
+// Tablet View
 @media (min-width: 1024px) {
-
-
   .container {
     max-width: 1024px;
   }
@@ -215,261 +189,60 @@
 
   .section {
     height: 25rem;
-  }
 
-  /* About this proyect Section */
-
-  .sectiontext {
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-
-  .sectiontext__h2,
-  .sectiontext__p {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .sectiontext__h2 {
-    text-align: center;
-    margin: 5rem;
-    align-items: center;
+    .imggallery__img {
+      max-width: 50%;
+    }
   }
 
   .sectiontext__p {
-    text-align: center;
-    margin-bottom: 8rem;
     padding: 2rem;
-
   }
-
-  /* Contact section*/
 
   .sectiontext__contact {
-    text-align: center;
     margin: 3rem;
     padding: 3rem;
   }
 
   .sectiontext__ul {
-    list-style: none;
     margin-bottom: 8rem;
+
+    &--li {
+      text-align: center;
+    }
   }
-
-  .sectiontext__ul--li {
-    text-align: center;
-  }
-
-
-
-  /* About model section*/
-
-  .imggallery {
-    display: flex;
-    justify-content: center;
-    margin: 5rem;
-  }
-
-  .imggallery__img {
-    border: 5px solid white;
-    max-width: 50%;
-  }
-
-
-
-
 }
 
-
-
-/* Desktop View */
-
-
+// Desktop View
 @media (min-width: 1200px) {
-
-
-  /* Container */
-
-
   .container {
     max-width: 1200px;
-    margin: auto;
-    padding: auto;
   }
-
-
-  /* Header */
 
   .header {
-    display: flex;
     justify-content: start;
-    align-items: center;
-    width: 100%;
+
+
+    .navbar:hover .navbar__ul,
+    .navbar:hover {
+      opacity: 1;
+      visibility: visible;
+    }
   }
-
-  .header__h1 {
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 18rem;
-    text-align: center;
-    margin-left: 35%;
-  }
-
-
-  /* Barra de navegación */
-
-  .header__navbar--button {
-    width: 100%;
-    height: 100%;
-  }
-
-  .header__navbar {
-    width: 2rem;
-    height: 2rem;
-    justify-content: center;
-  }
-
-  .navbar__ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    background-color: #e7e7e7;
-    width: 10rem;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease;
-  }
-
-  .navbar__ul--li {
-    border-bottom: 1px solid #ddd;
-  }
-
-  .navbar__ul--li a {
-    display: block;
-    padding: 12px;
-    text-decoration: none;
-    color: #333;
-  }
-
-  .navbar__ul--li a:hover {
-    background-color: #ddd;
-  }
-
-  .header__navbar:hover .navbar__ul,
-  .navbar:hover {
-    opacity: 1;
-    visibility: visible;
-  }
-
-
-  /* Galeria de imagenes en carrusel */
 
   .section {
-    margin: 2rem auto 3rem auto;
-    display: flex;
-    width: 70%;
     height: 35rem;
   }
 
   .section__img {
-    width: 0px;
-    flex-grow: 1;
-    object-fit: cover;
-    opacity: .5;
-    transition: .5s ease;
-  }
-
-  .section__img:hover {
-    cursor: crosshair;
-    width: 50%;
-    opacity: 1;
-    filter: contrast(120%);
-  }
-
-  /*  Footer */
-
-
-  .footer {
-    text-align: center;
-  }
-
-  .footer__p {
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-
-  /* Siento que esto podría generalizarlo mas arriba para no ocupar estas lineas tan especificas. "por revisar" */
-
-  .footer__a {
-    text-decoration: none;
-  }
-
-  .footer__a:visited {
-    text-decoration: none;
-    color: white
-  }
-
-
-
-  /* About this proyect Section */
-
-  .sectiontext {
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-
-  .sectiontext__h2,
-  .sectiontext__p {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .sectiontext__h2 {
-    text-align: center;
-    margin: 5rem;
-    align-items: center;
+    max-width: 50%;
   }
 
   .sectiontext__p {
-    text-align: center;
-    margin-bottom: 8rem;
     padding: 5rem;
-
-  }
-
-  /* Contact section*/
-
-  .sectiontext__contact {
-    text-align: center;
-    margin: 3rem;
-    padding: 3rem;
-  }
-
-  .sectiontext__ul {
-    list-style: none;
-    margin-bottom: 8rem;
-  }
-
-  .sectiontext__ul--li {
-    text-align: center;
-  }
-
-
-
-  /* About model section*/
-
-  .imggallery {
-    display: flex;
-    justify-content: center;
-    margin: 5rem;
   }
 
   .imggallery__img {
-    border: 5px solid white;
     max-width: 50%;
   }
 }
