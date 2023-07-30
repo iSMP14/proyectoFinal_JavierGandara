@@ -164,11 +164,12 @@ $font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 
   }
+
   .imggallery {
     display: flex;
     justify-content: center;
     margin: 5rem;
-  
+
     &__img {
       border: 5px solid white;
       max-width: 100%;
