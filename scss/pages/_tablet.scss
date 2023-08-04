@@ -1,0 +1,36 @@
+// Tablet View
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+
+  .header__h1 {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .section {
+    height: 25rem;
+
+    .imggallery__img {
+      max-width: 50%;
+    }
+  }
+
+  .sectiontext__p {
+    padding: 2rem;
+  }
+
+  .sectiontext__contact {
+    margin: 3rem;
+    padding: 3rem;
+  }
+
+  .sectiontext__ul {
+    margin-bottom: 8rem;
+
+    &--li {
+      text-align: center;
+    }
+  }
+}

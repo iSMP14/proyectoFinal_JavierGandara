@@ -1,0 +1,33 @@
+// Desktop View
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .header {
+    justify-content: start;
+
+
+    .navbar:hover .navbar__ul,
+    .navbar:hover {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .section {
+    height: 35rem;
+  }
+
+  .section__img {
+    max-width: 50%;
+  }
+
+  .sectiontext__p {
+    padding: 5rem;
+  }
+
+  .imggallery__img {
+    max-width: 50%;
+  }
+}
