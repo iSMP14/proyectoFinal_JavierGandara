@@ -1,4 +1,3 @@
-# proyectoFinal_JavierGandara
 Proyecto final curso Desarrollo Web | CoderHouse
 
 <div align="center">
